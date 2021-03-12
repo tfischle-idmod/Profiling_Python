@@ -36,8 +36,12 @@ https://pympler.readthedocs.io/en/latest/index.html#
 
 # mprof
 https://github.com/pythonprofilers/memory_profiler
-* uses psutil module
+* uses psutil module <br/><br/>
+<img src="mem_profile_main_mem.png" alt="memory usage over time" width="200"/>
 
+* created with <br/>
+    mprof run --interval 0.001 main_mem.py
+    mprof plot
 
 
 ## How does profiling work? 
