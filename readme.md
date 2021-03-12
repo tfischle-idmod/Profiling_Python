@@ -9,6 +9,9 @@ https://docs.python.org/3.7/library/profile.html
 ### PyCharm
 * Needs PyCharm Professional
 * Plots useful call <br/><br/>
+
+#### Example
+[source code example call graph](main.py)<br/><br/>
 <img src="profiling_main.png" alt="drawing" width="200"/>
 
 ### gprof2dot
@@ -37,7 +40,7 @@ https://pympler.readthedocs.io/en/latest/index.html#
 # mprof
 https://github.com/pythonprofilers/memory_profiler
 * uses psutil module <br/><br/>
-<img src="mem_profile_main_mem.png" alt="memory usage over time" width="200"/>
+<img src="mem_profile_main_mem.png" alt="memory usage over time"/>
 
 * created with <br/>
     mprof run --interval 0.001 main_mem.py

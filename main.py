@@ -1,6 +1,6 @@
 
 def computation():
-    a = range(int(1e6))
+    a = range(int(1e6))     # generate integers 0...10^6
     b = range(int(1e6))
     result = 0
     for x, y in zip(a, b):
@@ -19,9 +19,12 @@ def function2():
 
 
 def main_fct():
+    # spent some time here
     for _ in range(10000):
         for _ in range(1000):
             pass
+
+    # call functions
     function1()
     function2()
     function1()
