@@ -6,6 +6,11 @@ https://docs.python.org/3.7/library/profile.html
     
 
 ## Generating a call graph
+### PyCharm
+* Needs PyCharm Professional
+* Plots useful call <br/><br/>
+<img src="profiling_main.png" alt="drawing" width="200"/>
+
 ### gprof2dot
 * needs Graphiz
 * https://github.com/jrfonseca/gprof2dot
@@ -19,9 +24,6 @@ https://medium.com/@antoniomdk1/hpc-with-python-part-1-profiling-1dda4d172cdf
 
     gprof2dot -f pstats output.pstats | dot -Tpng -o output.png
     
-### PyCharm
-* Needs PyCharm Professional
-* Plots useful call graphs
 
 
 ### vprof
