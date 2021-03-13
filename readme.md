@@ -7,7 +7,7 @@ https://docs.python.org/3.7/library/profile.html
 * profile which is pure python and adds significant overhead
 * can be run as module (-m) or as function
 
-    python -m cProfile main.py
+````python -m cProfile main.py````<br/>
 <img src="cmd_cprofile_output.png" alt="command line output cProfile"/>
 
 ### PyCharm
@@ -25,7 +25,7 @@ https://github.com/nvdv/vprof
 ## Memory usage
 ### mprof
 Memory increase by line:
-    python -m memory_profiler main_mem.py
+````python -m memory_profiler main_mem.py````
 <img src="output_shell_mprof.png" alt="memory by line"/>
 
 https://github.com/pythonprofilers/memory_profiler
@@ -33,8 +33,8 @@ https://github.com/pythonprofilers/memory_profiler
 * @profile decorator
 
 * created with <br/>
-    mprof run --interval 0.001 main_mem.py
-    mprof plot
+````mprof run --interval 0.001 main_mem.py````
+````mprof plot````
 
 <img src="mem_profile_main_mem.png" alt="memory usage over time"/>
 
@@ -72,11 +72,11 @@ https://medium.com/@antoniomdk1/hpc-with-python-part-1-profiling-1dda4d172cdf
 
 1. First of all, we need to tell the profiler to dump the collected data into a file:
 
-    python3 -m cProfile -o output.pstats script.py
+````python3 -m cProfile -o output.pstats script.py````
 
 2. Secondly, we run gprof2dot to generate a png image:
 
-    gprof2dot -f pstats output.pstats | dot -Tpng -o output.png
+````gprof2dot -f pstats output.pstats | dot -Tpng -o output.png````
     
 
 ### pympler
