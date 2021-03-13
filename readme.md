@@ -1,51 +1,42 @@
 # Profiling Python
-## Dynamic Profiling
+
+## (Deterministic) Profiling
+### cProfiler (C), profile(Python)
 https://docs.python.org/3.7/library/profile.html
 * cProfile is recommended for most users; it’s a C extension
 * profile which is pure python and adds significant overhead
-    
+* can be run as module (-m) or as function
 
-## Generating a call graph
+    python -m cProfile main.py
+<img src="cmd_cprofile_output.png" alt="command line output cProfile"/>
+
 ### PyCharm
 * Needs PyCharm Professional
 * Plots useful call <br/><br/>
 
-#### Example
 [source code example call graph](main.py)<br/><br/>
 <img src="profiling_main.png" alt="drawing" width="200"/>
-
-### gprof2dot
-* needs Graphiz
-* https://github.com/jrfonseca/gprof2dot
-https://medium.com/@antoniomdk1/hpc-with-python-part-1-profiling-1dda4d172cdf
-
-1. First of all, we need to tell the profiler to dump the collected data into a file:
-
-    python3 -m cProfile -o output.pstats script.py
-
-2. Secondly, we run gprof2dot to generate a png image:
-
-    gprof2dot -f pstats output.pstats | dot -Tpng -o output.png
-    
-
 
 ### vprof
 https://github.com/nvdv/vprof
 * line debugger
 
-### pympler
-Detailed information about size and lifetime of Python objects
-https://pympler.readthedocs.io/en/latest/index.html#
 
-# mprof
+## Memory usage
+### mprof
+Memory increase by line:
+    python -m memory_profiler main_mem.py
+<img src="output_shell_mprof.png" alt="memory by line"/>
+
 https://github.com/pythonprofilers/memory_profiler
 * uses psutil module <br/><br/>
-<img src="mem_profile_main_mem.png" alt="memory usage over time"/>
+* @profile decorator
 
 * created with <br/>
     mprof run --interval 0.001 main_mem.py
     mprof plot
 
+<img src="mem_profile_main_mem.png" alt="memory usage over time"/>
 
 ## How does profiling work? 
 ### Python
@@ -72,5 +63,23 @@ https://users.cs.duke.edu/~raw/Python/api/profiling.html
 # py-spy
 
 
+# Other tools
+### gprof2dot
+* Open source
+* needs Graphiz
+* https://github.com/jrfonseca/gprof2dot
+https://medium.com/@antoniomdk1/hpc-with-python-part-1-profiling-1dda4d172cdf
 
+1. First of all, we need to tell the profiler to dump the collected data into a file:
+
+    python3 -m cProfile -o output.pstats script.py
+
+2. Secondly, we run gprof2dot to generate a png image:
+
+    gprof2dot -f pstats output.pstats | dot -Tpng -o output.png
+    
+
+### pympler
+Detailed information about size and lifetime of Python objects
+https://pympler.readthedocs.io/en/latest/index.html#
     
