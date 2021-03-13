@@ -7,19 +7,53 @@ https://docs.python.org/3.7/library/profile.html
 * profile which is pure python and adds significant overhead
 * can be run as module (-m) or as function
 
-````python -m cProfile main.py````<br/>
+
+    python -m cProfile main.py
+
 <img src="cmd_cprofile_output.png" alt="command line output cProfile"/>
+
+ncalls <br/>
+the number of calls.
+
+tottime <br/>
+the total time spent in the given function (and excluding time made in calls to sub-functions)
+
+percall<br/>
+is the quotient of tottime divided by ncalls
+    
+cumtime<br/>
+is the cumulative time spent in this and all subfunctions (from invocation till exit).
+
+percall<br/>
+the quotient of cumtime divided by primitive calls
+
+Output can be sorted, e.g. by total time
+
+    python -m cProfile -s tottime main.py
+
+<img src="cmd_cprofile_output_sorted.png" alt="command line output cProfile sorted"/>
 
 ### PyCharm
 * Needs PyCharm Professional
 * Plots useful call <br/><br/>
 
 [source code example call graph](main.py)<br/><br/>
-<img src="profiling_main.png" alt="drawing" width="200"/>
+<img src="profiling_main.png" alt="drawing" width="300"/>
 
 ### vprof
 https://github.com/nvdv/vprof
-* line debugger
+* code heatmap (time spent per line)
+* memory profiling
+* flame graph
+* starts http server
+
+<img src="vprof_code_heatmap.png" alt="vprof code heatmap"/>
+
+    vprof -c h main_mem.py
+
+Remarks:
+* slow
+* memory graph not displayed completely (wrong?)
 
 
 ## Memory usage
