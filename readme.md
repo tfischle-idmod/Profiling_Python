@@ -84,6 +84,13 @@ Remarks:
 * slow
 * memory graph not displayed completely (wrong?)
 
+### Line_profiler
+* like vprof but output via shell
+* Profiles the time individual lines of code take to execute
+* uses Cython to reduce overhead
+
+https://pypi.org/project/line-profiler/
+
 
 ## Memory usage
 ### mprof
