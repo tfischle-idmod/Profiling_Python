@@ -12,6 +12,7 @@ for the intervals between these events (during which time the user’s code is e
 In module sys, function ````setprofile()```` (https://docs.python.org/3/library/sys.html#sys.setprofile) <br/>
 * called with events 'call' and 'return' <br/>
 
+[source code example setprofile](main_setprofile.py)<br/><br/>
 <img src="output_setprofile.png" alt="output setprofile example"/>
 
 
@@ -34,6 +35,7 @@ https://docs.python.org/3.7/library/profile.html
 * profile which is pure python and adds significant overhead
 * can be run as module (-m) or as function
 
+[source code example cProfile](main.py)<br/><br/>
     
     python -m cProfile main.py
 
@@ -109,7 +111,8 @@ https://pypi.org/project/py-spy/
 * less overhead
 * provides only relative indications of where time is being spent
 
-# Other tools
+
+## Other tools
 ### gprof2dot
 * Open source
 * needs Graphiz
