@@ -14,8 +14,7 @@ def main_fct():
 
 
 def profile_fct(frame, event, arg):
-    #fcode = frame.f_code
-    #fn = (fcode.co_filename, fcode.co_firstlineno, fcode.co_name)
+    #fn = (frame.f_code.co_filename, frame.f_code.co_firstlineno, frame.f_code.co_name)
     print("event:", event, "  function: ", frame.f_code.co_name)
 
 if __name__ == '__main__':
