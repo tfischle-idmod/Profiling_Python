@@ -90,7 +90,7 @@ Memory increase by line:
 <img src="output_shell_mprof.png" alt="memory by line"/>
 
 https://github.com/pythonprofilers/memory_profiler
-* uses psutil module <br/><br/>
+* uses psutil module
 * @profile decorator
 
 * created with <br/>
