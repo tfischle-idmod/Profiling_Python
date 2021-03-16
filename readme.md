@@ -7,7 +7,10 @@
 All function call, function return, and exception events are monitored, and precise timings are made
 for the intervals between these events (during which time the user’s code is executing).
 
-### How does profiling work? 
+### How does profiling work?
+* Python interface and
+* cPython interface to Python interpreter
+
 #### Python
 In module sys, function ````setprofile()```` (https://docs.python.org/3/library/sys.html#sys.setprofile) <br/>
 * called with events 'call' and 'return' <br/>
@@ -21,8 +24,11 @@ eg. https://github.com/nvdv/vprof/blob/8898b528b4a6bea6384a2b5dbe8f38b03a47bfda/
 
 
 #### cPython (C)
-https://github.com/python/cpython/blob/master/Lib/cProfile.py
+Equivalent functions in cPython:
+* void PyEval_SetProfile(Py_tracefunc func, PyObject *obj) 
+* void PyEval_SetTrace(Py_tracefunc func, PyObject *obj) 
 
+https://github.com/python/cpython/blob/master/Lib/cProfile.py <br/>
 https://github.com/python/cpython/blob/master/Modules/_lsprof.c, search for "_PyEval_SetProfile"
 
 Python/C API Reference Manual - 8.2 Profiling and Tracing <br/>
@@ -32,7 +38,7 @@ https://users.cs.duke.edu/~raw/Python/api/profiling.html
 ### Running as module
 https://docs.python.org/3.7/library/profile.html
 * cProfile is recommended for most users; it’s a C extension
-* profile which is pure python and adds significant overhead
+* profile is pure python and adds significant overhead
 * can be run as module (-m) or as function
 
 [source code example cProfile](main.py)<br/><br/>
@@ -102,9 +108,9 @@ https://github.com/pythonprofilers/memory_profiler
 * uses psutil module
 * @profile decorator
 
-* created with <br/>
-````mprof run --interval 0.001 main_mem.py````
-````mprof plot````
+
+    mprof run --interval 0.001 main_mem.py
+    mprof plot
 
 <img src="mem_profile_main_mem.png" alt="memory usage over time"/>
 
