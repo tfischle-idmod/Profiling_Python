@@ -103,6 +103,8 @@ https://pypi.org/project/line-profiler/
 
 ## Memory usage
 ### mprof
+[source code example memory](main_mem.py)<br/>
+
 Memory increase by line:
 ````python -m memory_profiler main_mem.py````
 <img src="output_shell_mprof.png" alt="memory by line"/>
