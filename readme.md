@@ -114,6 +114,7 @@ https://github.com/pythonprofilers/memory_profiler
 * @profile decorator<br/>
 
 
+
     mprof run --interval 0.001 main_mem.py
     mprof plot
 
