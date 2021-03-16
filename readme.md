@@ -111,7 +111,7 @@ Memory increase by line:
 
 https://github.com/pythonprofilers/memory_profiler
 * uses psutil module
-* @profile decorator
+* @profile decorator<br/>
 
 
     mprof run --interval 0.001 main_mem.py
