@@ -22,6 +22,9 @@ In module sys, function ````setprofile()```` (https://docs.python.org/3/library/
 Similar there is a function ````settrace()```` (https://docs.python.org/3/library/sys.html#sys.settrace) <br/>
 eg. https://github.com/nvdv/vprof/blob/8898b528b4a6bea6384a2b5dbe8f38b03a47bfda/vprof/code_heatmap.py#L46
 
+More information about interpreter internals:<br/>
+https://p403n1x87.github.io/deterministic-and-statistical-python-profiling.html
+
 
 #### cPython (C)
 Equivalent functions in cPython:
