@@ -113,10 +113,8 @@ https://github.com/pythonprofilers/memory_profiler
 * uses psutil module
 * @profile decorator<br/>
 
-
-
-    mprof run --interval 0.001 main_mem.py
-    mprof plot
+    ````mprof run --interval 0.001 main_mem.py```` <br/>
+    ````mprof plot````
 
 <img src="mem_profile_main_mem.png" alt="memory usage over time"/>
 
